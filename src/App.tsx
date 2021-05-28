@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { isNamedTupleMember } from 'typescript';
+import { MondaiType } from './types/UserType';
 
 function App() {
 
@@ -37,10 +38,10 @@ function App() {
     return undefined
   };
 
-  const error = (number: string): never => {
-    throw new Error();
-  };
-  console.log(error('hello'));
+  // const error = (number: string): never => {
+  //   throw new Error();
+  // };
+  // console.log(error('hello'));
 
   type TestType = {
     id: number,
@@ -49,7 +50,7 @@ function App() {
   let object1: TestType = { id: 1, name: 'satake' }
   let object2: { id: number, name: string } = { id: 1, name: 'satake' };
 
-  type ObjectInterface = {
+  interface ObjectInterface {
     id: number;
     name: string;
   }
@@ -86,6 +87,26 @@ function App() {
   let nitiyoubi: 'sun' = 'sun'
   let yes: true = true;
   let week: 'sun' | 'mun' | 'tue' | 'wen' | 'thu' | 'fry' | 'sut' = 'sun';
+
+  interface MondaiInterface {
+    id: number,
+    name: string,
+    url: string,
+    isStart: boolean,
+  }
+
+  const mondai: MondaiType = {
+    id: 1,
+    name: 'mondai',
+    url: 'http://mondai.com',
+    isStart: false,
+  };
+
+
+
+
+
+
 
   return (
     <div className="App">
