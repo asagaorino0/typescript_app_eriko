@@ -31,10 +31,10 @@ function App() {
     return undefined
   };
 
-  const error = (number: string): never => {
-    throw new Error();
-  };
-  console.log(error('hello'));
+  // const error = (number: string): never => {
+  //   throw new Error();
+  // };
+  // console.log(error('hello'));
 
   type TestType = {
     id: number,
@@ -86,16 +86,26 @@ function App() {
     axios.get('https://jsonplaceholder.typicode.com/users')
       .then(res => {
         setData(res.data)
-        const data: UsersType = {
+        const userdata: UsersType = {
           id: res.data.id,
           name: res.data.name,
           username: res.data.username,
-          email: res.data.email
+          email: res.data.email,
+          address_street: res.data.address_street,
+          address_suite: res.data.address_suit,
+          address_city: res.data.address_city,
+          address_zipcode: res.data.address_zipcode,
+          geo_lat: res.data.address_geo_lat,
+          geo_lng: res.data.address_geo_lng,
+          geo_phone: res.data.phone,
+          geo_website: res.data.website,
+          company_name: res.data.company_name,
+          company_catchPhrase: res.data.company_catchPhrase,
+          company_bs: res.data.company_bs,
         }
       })
   }, []
   )
-  // console.log(data)
 
   return (
     <div className="App">
