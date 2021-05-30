@@ -4,8 +4,11 @@ import './App.css';
 import { isNamedTupleMember } from 'typescript';
 import { MondaiType, UsersType } from './types/UserType';
 import axios from 'axios';
+import Login from './components/Login'
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-function App() {
+
+const App: React.FC<{}> = () => {
   const isFlag1: boolean = true;
   const isFlag2: boolean = false;
   const isFlag3: string = 'aaa';
@@ -105,25 +108,35 @@ function App() {
         }
       })
   }, []
-  )
+  );
+
+
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // <div className="App">
+    //   <header className="App-header">
+    //     <img src={logo} className="App-logo" alt="logo" />
+    //     <p>
+    //       Edit <code>src/App.tsx</code> and save to reload.
+    //     </p>
+    //     <a
+    //       className="App-link"
+    //       href="https://reactjs.org"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //     >
+    //       Learn React
+    //     </a>
+    //   </header>
+    <div>
+      <Login id="1" name="satake" age={28}
+        isLive={true} />
+
+
+
+
     </div>
+
   );
 }
 

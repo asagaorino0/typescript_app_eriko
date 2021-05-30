@@ -21,3 +21,12 @@ export type UsersType = {
     company_catchPhrase: string,
     company_bs: string,
 }
+export type UserType = {
+    id: string;
+    name: string;
+    age: number;
+    isLive: boolean;
+}
+export type counter = {
+    count: number;
+}
